@@ -131,22 +131,23 @@ body {
   background-color: #FFFFFF;
   font-family: 'Palanquin', sans-serif; }
 
-div#splash {
+section#splash {
   background-image: linear-gradient(to bottom, #3d0200, #1B1B1F);
   position: relative; }
-  div#splash #about-me {
+  section#splash #about-me {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-    div#splash #about-me p {
+    section#splash #about-me p {
       color: #F8F8F8;
       font-size: 36px;
       font-weight: 700; }
-      div#splash #about-me p span {
+      section#splash #about-me p span {
         color: #FF5851; }
-    div#splash #about-me button {
+    section#splash #about-me .scroll-to {
+      display: inline-block;
       color: #FF5851;
       text-transform: uppercase;
       font-size: 16px;
@@ -156,61 +157,65 @@ div#splash {
       background: transparent;
       border: 2px solid #FF5851;
       outline: none;
+      text-decoration: none;
       transition: color 0.5s ease, border 0.5s ease, transform 0.5s ease;
       cursor: pointer; }
-      div#splash #about-me button:hover {
+      section#splash #about-me .scroll-to:hover {
         color: #F8F8F8;
         border: 2px solid #F8F8F8;
         transform: scale(1.1); }
 
-div#projects {
+section#projects {
   margin: 0 auto;
   padding: 80px 0;
   box-sizing: border-box;
   max-width: 1000px;
   min-height: 100vh; }
+  section#projects h2.section-title {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px; }
+  section#projects .project-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    section#projects .project-list > li {
+      box-sizing: border-box;
+      width: 33%;
+      margin: 0 10px;
+      padding: 20px;
+      text-align: center;
+      border: 5px solid #FF5851; }
+      section#projects .project-list > li h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px; }
+      section#projects .project-list > li .project-technologies {
+        color: #FF5851;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 10px; }
+      section#projects .project-list > li a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #FF5851;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 40px;
+        padding: 10px 20px;
+        background: transparent;
+        border: 2px solid #FF5851;
+        outline: none;
+        transition: color 0.5s ease, border 0.5s ease, transform 0.5s ease;
+        text-decoration: none; }
+        section#projects .project-list > li a:hover {
+          color: #1B1B1F;
+          border: 2px solid #1B1B1F;
+          transform: translateY(-5px); }
 
-h2.section-title {
-  text-transform: uppercase;
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 40px; }
-
-.project-list {
-  display: flex;
-  justify-content: space-between;
-  width: 100%; }
-  .project-list > li {
-    box-sizing: border-box;
-    width: 33%;
-    margin: 0 10px;
-    padding: 20px;
-    text-align: center;
-    border: 5px solid #FF5851; }
-    .project-list > li h3 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 10px; }
-    .project-list > li .project-technologies {
-      color: #FF5851;
-      display: flex;
-      justify-content: space-evenly;
-      margin-bottom: 10px; }
-    .project-list > li a {
-      display: inline-block;
-      margin-top: 20px;
-      color: #FF5851;
-      text-transform: uppercase;
-      font-size: 16px;
-      font-weight: 700;
-      margin-top: 40px;
-      padding: 10px 20px;
-      background: transparent;
-      border: 2px solid #FF5851;
-      outline: none;
-      transition: color 0.5s ease, border 0.5s ease, transform 0.5s ease;
-      text-decoration: none; }
-      .project-list > li a:hover {
-        color: #1B1B1F;
-        border: 2px solid #1B1B1F;
-        transform: translateY(-5px); }
+section#about-me {
+  width: 100%;
+  background-color: #1B1B1F;
+  min-height: 100vh; }
