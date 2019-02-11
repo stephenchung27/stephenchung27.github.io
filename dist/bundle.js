@@ -95,11 +95,11 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _splash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./splash */ "./assets/js/splash.js");
+/* harmony import */ var _splash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./splash */ "./assets/js/splash.js");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  Object(_splash__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  Object(_splash__WEBPACK_IMPORTED_MODULE_0__["default"])();
 });
 
 /***/ }),

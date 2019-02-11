@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode=development",
+    "build": "webpack --watch --mode=development",
     "build-css": "node-sass --include-path scss assets/css/main.scss assets/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "predeploy": "npm run build",
