@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch --mode=development",
     "build-css": "node-sass --include-path scss assets/css/main.scss assets/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -16,6 +17,7 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
     "source-map": "^0.7.3",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3"

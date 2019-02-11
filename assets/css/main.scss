@@ -5,11 +5,10 @@
 body {
   background-color: $white;
   font-family: 'Palanquin', sans-serif;
-  // background: #ccc;
-  background-image: linear-gradient(to bottom, $dark-red, $black);
 }
 
-div.home {
+div#splash {
+  background-image: linear-gradient(to bottom, $dark-red, $black);
   position: relative;
   #about-me {
     position: absolute;
@@ -17,7 +16,6 @@ div.home {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-
     p {
       color: $off-white;
       font-size: 36px;
@@ -26,7 +24,6 @@ div.home {
         color: $red;
       }
     }
-
     button {
       color: $red;
       text-transform: uppercase;
@@ -36,7 +33,6 @@ div.home {
       padding: 20px;
       background: transparent;
       border: 2px solid $red;
-      border-radius: 5px;
       outline: none;
       transition: color 0.5s ease, border 0.5s ease, transform 0.5s ease;
       cursor: pointer;
@@ -44,6 +40,66 @@ div.home {
         color: $off-white;
         border: 2px solid $off-white;
         transform: scale(1.1);
+      }
+    }
+  }
+}
+
+div#projects {
+  margin: 0 auto;
+  padding: 80px 0;
+  box-sizing: border-box;
+  max-width: 1000px;
+  min-height: 100vh;
+}
+
+h2.section-title {
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  > li {
+    box-sizing: border-box;
+    width: 33%;
+    margin: 0 10px;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid $red;
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .project-technologies {
+      color: $red;
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 10px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: $red;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background: transparent;
+      border: 2px solid $red;
+      outline: none;
+      transition: color 0.5s ease, border 0.5s ease, transform 0.5s ease;
+      text-decoration: none;
+      &:hover {
+        color: $black;
+        border: 2px solid $black;
+        transform: translateY(-5px);
       }
     }
   }
