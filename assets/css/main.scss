@@ -1,0 +1,50 @@
+@import 'reset';
+@import 'colors';
+@import url('https://fonts.googleapis.com/css?family=Palanquin:300,700');
+
+body {
+  background-color: $white;
+  font-family: 'Palanquin', sans-serif;
+  // background: #ccc;
+  background-image: linear-gradient(to bottom, $dark-red, $black);
+}
+
+div.home {
+  position: relative;
+  #about-me {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    p {
+      color: $off-white;
+      font-size: 36px;
+      font-weight: 700;
+      span {
+        color: $red;
+      }
+    }
+
+    button {
+      color: $red;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 40px;
+      padding: 20px;
+      background: transparent;
+      border: 2px solid $red;
+      border-radius: 5px;
+      outline: none;
+      transition: color 0.5s ease, border 0.5s ease, transform 0.5s ease;
+      cursor: pointer;
+      &:hover {
+        color: $off-white;
+        border: 2px solid $off-white;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
