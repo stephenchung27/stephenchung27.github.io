@@ -263,28 +263,38 @@ canvas#waves {
 
 h2#projects-title.section-title {
   position: absolute;
-  left: 50%;
+  left: -50%;
   transform: translateX(-50%);
   top: 20vh;
   text-transform: uppercase;
   font-size: 48px;
-  font-weight: 700; }
-  h2#projects-title.section-title::after {
-    position: absolute;
-    bottom: -45%;
-    left: 10%;
-    content: "";
-    display: block;
-    width: 80%;
-    height: 20%;
-    background-color: #FF5851;
-    z-index: -1; }
+  font-weight: 700;
+  transition: left 1s ease;
+  opacity: 0; }
+  h2#projects-title.section-title.visible {
+    opacity: 1;
+    left: 50% !important; }
 
 section#about-me {
   width: 100%;
   background-color: #FFFFFF;
   min-height: 100vh;
   position: relative; }
+
+.title-underline {
+  position: absolute;
+  top: calc(20vh + 60px);
+  right: -50%;
+  transform: translateX(50%);
+  display: block;
+  height: 10px;
+  width: 150px;
+  opacity: 0;
+  transition: right 1s ease;
+  background-color: #FF5851; }
+  .title-underline.visible {
+    opacity: 1;
+    right: 50% !important; }
 
 body {
   background-color: #F8F8F8;

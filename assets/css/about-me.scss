@@ -1,21 +1,16 @@
 h2#projects-title.section-title {
   position: absolute;
-  left: 50%;
+  left: -50%;
   transform: translateX(-50%);
   top: 20vh;
   text-transform: uppercase;
   font-size: 48px;
   font-weight: 700;
-  &::after {
-    position: absolute;
-    bottom: -45%;
-    left: 10%;
-    content: "";
-    display: block;
-    width: 80%;
-    height: 20%;
-    background-color: $red;
-    z-index: -1;
+  transition: left 1s ease;
+  opacity: 0;
+  &.visible {
+    opacity: 1;
+    left: 50% !important;
   }
 }
 
@@ -26,3 +21,19 @@ section#about-me {
   position: relative;
 }
 
+.title-underline {
+  position: absolute;
+  top: calc(20vh + 60px);
+  right: -50%;
+  transform: translateX(50%);
+  display: block;
+  height: 10px;
+  width: 150px;
+  opacity: 0;
+  transition: right 1s ease;
+  background-color: $red;
+  &.visible {
+    opacity: 1;
+    right: 50% !important;
+  }
+}

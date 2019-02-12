@@ -86,6 +86,31 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/js/about.js":
+/*!****************************!*\
+  !*** ./assets/js/about.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const about = () => {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height() / 4) {
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#projects-title").addClass("visible");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#about-me .title-underline").addClass("visible");
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (about);
+
+/***/ }),
+
 /***/ "./assets/js/index.js":
 /*!****************************!*\
   !*** ./assets/js/index.js ***!
@@ -100,6 +125,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./splash */ "./assets/js/splash.js");
 /* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./projects */ "./assets/js/projects.js");
 /* harmony import */ var _waves__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./waves */ "./assets/js/waves.js");
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./about */ "./assets/js/about.js");
+
 
 
 
@@ -110,11 +137,11 @@ document.addEventListener("DOMContentLoaded", () => {
   Object(_splash__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_projects__WEBPACK_IMPORTED_MODULE_2__["figure"])();
   Object(_waves__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).scroll(() => {
-    console.log(Math.floor(jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() / jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height()));
+    Object(_about__WEBPACK_IMPORTED_MODULE_4__["default"])();
   });
-  
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-to').click((e) => {
     const jump = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-to').attr('href');
     const new_position = jquery__WEBPACK_IMPORTED_MODULE_0___default()(jump).offset();
