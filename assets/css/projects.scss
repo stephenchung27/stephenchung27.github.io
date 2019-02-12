@@ -8,6 +8,15 @@ canvas#waves {
   display:block; margin:0 auto;background:#333;
   z-index: -1;
 }
+h2.section-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20vh;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+}
 
 section#projects {
   background: $white;
@@ -19,13 +28,6 @@ section#projects {
     padding: 0px 100px 80px;
     max-width: 1200px;
     background-color: transparent;
-    h2.section-title {
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 40px;
-    }
     .project-list {
       display: flex;
       justify-content: space-between;
