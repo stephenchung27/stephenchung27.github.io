@@ -1,5 +1,5 @@
 section#splash {
-  background-color: $dark-red;
+  background-color: $black;
   position: relative;
   height: 80vh;
   &::after {
@@ -12,7 +12,7 @@ section#splash {
   }
   #introduction {
     position: absolute;
-    top: 50%;
+    top: calc(50% + 10vh);
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;

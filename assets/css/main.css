@@ -216,7 +216,7 @@ section#projects {
                 transform: scale(1.1); }
 
 section#splash {
-  background-color: #3d0200;
+  background-color: #1B1B1F;
   position: relative;
   height: 80vh; }
   section#splash::after {
@@ -228,7 +228,7 @@ section#splash {
     height: 50%; }
   section#splash #introduction {
     position: absolute;
-    top: 50%;
+    top: calc(50% + 10vh);
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
