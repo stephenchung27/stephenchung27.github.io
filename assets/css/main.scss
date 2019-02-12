@@ -2,15 +2,10 @@
 @import 'colors';
 @import 'projects';
 @import 'splash';
+@import 'about-me';
 @import url('https://fonts.googleapis.com/css?family=Palanquin:300,700');
 
 body {
   background-color: $off-white;
   font-family: 'Palanquin', sans-serif;
-}
-
-section#about-me {
-  width: 100%;
-  background-color: $black;
-  min-height: 100vh;
 }

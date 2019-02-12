@@ -130,25 +130,8 @@ table {
 video::-webkit-media-controls {
   display: none !important; }
 
-canvas#waves {
-  width: 100%;
-  height: 250px;
-  display: block;
-  margin: 0 auto;
-  background: #333;
-  z-index: -1; }
-
-h2.section-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 20vh;
-  text-transform: uppercase;
-  font-size: 36px;
-  font-weight: 700; }
-
 section#projects {
-  background: #FFFFFF;
+  background: #1B1B1F;
   box-sizing: border-box;
   min-height: 100vh;
   position: relative; }
@@ -270,11 +253,29 @@ section#splash {
         margin-left: 8px;
         transition: transform 0.5s ease; }
 
-body {
-  background-color: #F8F8F8;
-  font-family: 'Palanquin', sans-serif; }
+canvas#waves {
+  width: 100%;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+  background: #333;
+  z-index: -1; }
+
+h2#projects-title.section-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20vh;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700; }
 
 section#about-me {
   width: 100%;
-  background-color: #1B1B1F;
-  min-height: 100vh; }
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  position: relative; }
+
+body {
+  background-color: #F8F8F8;
+  font-family: 'Palanquin', sans-serif; }

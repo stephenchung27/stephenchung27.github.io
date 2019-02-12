@@ -58,3 +58,10 @@ section#splash {
     }
   }
 }
+
+canvas#waves {
+  width:100%; 
+  height:250px;
+  display:block; margin:0 auto;background:#333;
+  z-index: -1;
+}
