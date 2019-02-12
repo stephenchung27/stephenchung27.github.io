@@ -137,7 +137,7 @@ section#projects {
   position: relative; }
   section#projects .projects-wrapper {
     margin: 0 auto;
-    padding: 0px 100px 80px;
+    padding: 80px 100px;
     max-width: 1200px;
     background-color: transparent; }
     section#projects .projects-wrapper .project-list {
@@ -267,8 +267,18 @@ h2#projects-title.section-title {
   transform: translateX(-50%);
   top: 20vh;
   text-transform: uppercase;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700; }
+  h2#projects-title.section-title::after {
+    position: absolute;
+    bottom: -45%;
+    left: 10%;
+    content: "";
+    display: block;
+    width: 80%;
+    height: 20%;
+    background-color: #FF5851;
+    z-index: -1; }
 
 section#about-me {
   width: 100%;
