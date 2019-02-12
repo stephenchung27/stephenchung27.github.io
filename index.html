@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/main.css">
   <script src="./dist/bundle.js"></script>
   <title>Stephen Chung</title>
@@ -15,23 +17,27 @@
     <canvas id="canvas"></canvas>
     <div id="about-me">
       <p>Hello, my name is <span>Stephen Chung</span>.</p>
-      <p>I am a webdeveloper from New York City.</p>
-      <a href="#projects" class="scroll-to">Find out more</a>
+      <p>I am a web developer in New York City.</p>
+      <a href="#projects" class="scroll-to">Find out more <i class="fas fa-arrow-circle-right"></i></a>
     </div>
   </section>
   <section id="projects">
     <h2 class="section-title">Projects</h2>
     <ul class="project-list">
-      <li>
-        <h3>Hexagon</h3>
-        <ul class="project-technologies">
-          <li>Javascript</li>
-          <li>Canvas</li>
-        </ul>
-        <p class="project-description">An arcade game where you must dodge the converging walls to
-          gain levels and a highscore!
-        </p>
-        <a href="/hexagon/">Live</a>
+      <li id="hexagon">
+        <video loop muted id="hexagon-demo">
+          <source src="./assets/videos/hexagon.mov">
+        </video>
+        <div class="project-list-item-overlay">
+          <div class="project-list-item">
+            <h3>Hexagon</h3>
+            <ul class="project-technologies">
+              <li>Javascript</li>
+              <li>Canvas</li>
+            </ul>
+            <a href="/hexagon/">Live</a>
+          </div>
+        </div>
       </li>
       <li></li>
       <li></li>
