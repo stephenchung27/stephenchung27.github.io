@@ -231,11 +231,6 @@ const runSplash = () => {
     if (np) np.res_(e.touches[0].clientX, e.touches[0].clientY);
   }, false);
 
-  setInterval(() => {
-    var np = nPart();
-    if (np) np.res_(Math.random() * window.innerWidth, Math.random() * window.innerHeight)
-  }, 50)
-
   function run() {
     window.requestAnimationFrame(run);
     draw();
