@@ -1,87 +1,101 @@
 video::-webkit-media-controls {
-    display:none !important;
+  display:none !important;
+}
+
+canvas#waves {
+  width:100%; 
+  height:250px;
+  display:block; margin:0 auto;background:#333;
+  z-index: -1;
 }
 
 section#projects {
-  margin: 0 auto;
   background: $white;
   box-sizing: border-box;
-  max-width: 1200px;
-  padding: 80px 100px;
   min-height: 100vh;
-  h2.section-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 40px;
-  }
-  .project-list {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    > li {
-      box-sizing: border-box;
-      width: 33%;
+  position: relative;
+  .projects-wrapper {
+    margin: 0 auto;
+    padding: 0px 100px 80px;
+    max-width: 1200px;
+    background-color: transparent;
+    h2.section-title {
       text-align: center;
-      transition: transform .5s ease;
-      position: relative;
-      &:hover {
-        .project-list-item-overlay {
-          opacity: 1;
-          .project-list-item {
-            transform: translateY(0px);
-          }
-        }
-      }
-      video {
-        width: 100%;
-      }
-      .project-list-item-overlay {
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        color: $white;
-        opacity: 0;
-        transition: background-color 0.3s ease, opacity 0.3s ease;
-        .project-list-item {
-          transform: translateY(15px);
-          transition: transform 0.3s ease;
-          h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 10px;
-          }
-          .project-technologies {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-            margin-bottom: 10px;
-            li {
-              margin-left: 10px;
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    .project-list {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      > li {
+        box-sizing: border-box;
+        width: 33%;
+        text-align: center;
+        transition: transform .5s ease;
+        position: relative;
+        &:hover {
+          .project-list-item-overlay {
+            opacity: 1;
+            .project-list-item-description {
+              transform: scale(1);
             }
           }
-          a {
-            margin-top: 10px;
-            display: inline-block;
-            color: $white;
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: 700;
-            padding: 10px 20px;
-            background: transparent;
-            border: 2px solid $white;
-            outline: none;
-            transition: transform 0.5s ease;
-            text-decoration: none;
-            &:hover {
-              transform: scale(1.1);
+        }
+        video {
+          width: 100%;
+        }
+        .project-list-item-overlay {
+          background-color: rgba(0, 0, 0, 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          color: $white;
+          opacity: 0;
+          transition: background-color 0.3s ease, opacity 0.3s ease;
+          .project-list-item-description {
+            transform: scale(2);
+            transition: transform 0.3s ease-in-out;
+            h3 {
+              font-size: 24px;
+              font-weight: 700;
+              margin-bottom: 10px;
+            }
+            .project-technologies {
+              display: flex;
+              justify-content: space-evenly;
+              width: 100%;
+              margin-bottom: 10px;
+              li {
+                margin-left: 10px;
+              }
+            }
+            a {
+              margin-top: 10px;
+              display: inline-block;
+              color: $white;
+              text-transform: uppercase;
+              font-size: 16px;
+              font-weight: 700;
+              padding: 10px 20px;
+              background: transparent;
+              border: 2px solid $white;
+              outline: none;
+              transition: transform 0.5s ease;
+              text-decoration: none;
+              i {
+                margin-left: 5px;
+              }
+              &:hover {
+                transform: scale(1.1);
+              }
             }
           }
         }
@@ -89,4 +103,3 @@ section#projects {
     }
   }
 }
-

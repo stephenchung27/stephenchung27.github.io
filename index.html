@@ -15,33 +15,36 @@
 <body>
   <section id="splash">
     <canvas id="canvas"></canvas>
-    <div id="about-me">
+    <div id="introduction">
       <p>Hello, my name is <span>Stephen Chung</span>.</p>
       <p>I am a web developer in New York City.</p>
       <a href="#projects" class="scroll-to">Find out more <i class="fas fa-arrow-circle-right"></i></a>
     </div>
   </section>
   <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <ul class="project-list">
-      <li id="hexagon">
-        <video loop muted id="hexagon-demo">
-          <source src="./assets/videos/hexagon.mov">
-        </video>
-        <div class="project-list-item-overlay">
-          <div class="project-list-item">
-            <h3>Hexagon</h3>
-            <ul class="project-technologies">
-              <li>Javascript</li>
-              <li>Canvas</li>
-            </ul>
-            <a href="/hexagon/">Live</a>
+    <canvas id="waves"></canvas>
+    <div class="projects-wrapper">
+      <h2 class="section-title">Projects</h2>
+      <ul class="project-list">
+        <li id="hexagon">
+          <video loop muted id="hexagon-demo">
+            <source src="./assets/videos/hexagon.mov">
+          </video>
+          <div class="project-list-item-overlay">
+            <div class="project-list-item-description">
+              <h3>Hexagon</h3>
+              <ul class="project-technologies">
+                <li>Javascript</li>
+                <li>Canvas</li>
+              </ul>
+              <a href="/hexagon/">Live <i class="fas fa-external-link-square-alt"></i></a>
+            </div>
           </div>
-        </div>
-      </li>
-      <li></li>
-      <li></li>
-    </ul>
+        </li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   </section>
   <section id="about-me">
     Test

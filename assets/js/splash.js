@@ -2,7 +2,7 @@ const runSplash = () => {
   var canvas = document.getElementById("canvas");
   var ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.height = window.innerHeight * .80;
 
   var max = 100;
   var num = 1;
@@ -244,7 +244,7 @@ const runSplash = () => {
 
   window.addEventListener('resize', function () {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight * .80;
   }, false);
 
 }

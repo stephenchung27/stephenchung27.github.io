@@ -130,94 +130,116 @@ table {
 video::-webkit-media-controls {
   display: none !important; }
 
-section#projects {
+canvas#waves {
+  width: 100%;
+  height: 250px;
+  display: block;
   margin: 0 auto;
+  background: #333;
+  z-index: -1; }
+
+section#projects {
   background: #FFFFFF;
   box-sizing: border-box;
-  max-width: 1200px;
-  padding: 80px 100px;
-  min-height: 100vh; }
-  section#projects h2.section-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 40px; }
-  section#projects .project-list {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; }
-    section#projects .project-list > li {
-      box-sizing: border-box;
-      width: 33%;
+  min-height: 100vh;
+  position: relative; }
+  section#projects .projects-wrapper {
+    margin: 0 auto;
+    padding: 0px 100px 80px;
+    max-width: 1200px;
+    background-color: transparent; }
+    section#projects .projects-wrapper h2.section-title {
       text-align: center;
-      transition: transform .5s ease;
-      position: relative; }
-      section#projects .project-list > li:hover .project-list-item-overlay {
-        opacity: 1; }
-        section#projects .project-list > li:hover .project-list-item-overlay .project-list-item {
-          transform: translateY(0px); }
-      section#projects .project-list > li video {
-        width: 100%; }
-      section#projects .project-list > li .project-list-item-overlay {
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        color: #FFFFFF;
-        opacity: 0;
-        transition: background-color 0.3s ease, opacity 0.3s ease; }
-        section#projects .project-list > li .project-list-item-overlay .project-list-item {
-          transform: translateY(15px);
-          transition: transform 0.3s ease; }
-          section#projects .project-list > li .project-list-item-overlay .project-list-item h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 10px; }
-          section#projects .project-list > li .project-list-item-overlay .project-list-item .project-technologies {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-            margin-bottom: 10px; }
-            section#projects .project-list > li .project-list-item-overlay .project-list-item .project-technologies li {
-              margin-left: 10px; }
-          section#projects .project-list > li .project-list-item-overlay .project-list-item a {
-            margin-top: 10px;
-            display: inline-block;
-            color: #FFFFFF;
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: 700;
-            padding: 10px 20px;
-            background: transparent;
-            border: 2px solid #FFFFFF;
-            outline: none;
-            transition: transform 0.5s ease;
-            text-decoration: none; }
-            section#projects .project-list > li .project-list-item-overlay .project-list-item a:hover {
-              transform: scale(1.1); }
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 40px; }
+    section#projects .projects-wrapper .project-list {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      section#projects .projects-wrapper .project-list > li {
+        box-sizing: border-box;
+        width: 33%;
+        text-align: center;
+        transition: transform .5s ease;
+        position: relative; }
+        section#projects .projects-wrapper .project-list > li:hover .project-list-item-overlay {
+          opacity: 1; }
+          section#projects .projects-wrapper .project-list > li:hover .project-list-item-overlay .project-list-item-description {
+            transform: scale(1); }
+        section#projects .projects-wrapper .project-list > li video {
+          width: 100%; }
+        section#projects .projects-wrapper .project-list > li .project-list-item-overlay {
+          background-color: rgba(0, 0, 0, 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          color: #FFFFFF;
+          opacity: 0;
+          transition: background-color 0.3s ease, opacity 0.3s ease; }
+          section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description {
+            transform: scale(2);
+            transition: transform 0.3s ease-in-out; }
+            section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description h3 {
+              font-size: 24px;
+              font-weight: 700;
+              margin-bottom: 10px; }
+            section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description .project-technologies {
+              display: flex;
+              justify-content: space-evenly;
+              width: 100%;
+              margin-bottom: 10px; }
+              section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description .project-technologies li {
+                margin-left: 10px; }
+            section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description a {
+              margin-top: 10px;
+              display: inline-block;
+              color: #FFFFFF;
+              text-transform: uppercase;
+              font-size: 16px;
+              font-weight: 700;
+              padding: 10px 20px;
+              background: transparent;
+              border: 2px solid #FFFFFF;
+              outline: none;
+              transition: transform 0.5s ease;
+              text-decoration: none; }
+              section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description a i {
+                margin-left: 5px; }
+              section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description a:hover {
+                transform: scale(1.1); }
 
 section#splash {
-  background-image: linear-gradient(to bottom, #3d0200, #1B1B1F);
-  position: relative; }
-  section#splash #about-me {
+  background-color: #3d0200;
+  position: relative;
+  height: 80vh; }
+  section#splash::after {
+    background-image: linear-gradient(to bottom, transparent, #1B1B1F);
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 50%; }
+  section#splash #introduction {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; }
-    section#splash #about-me p {
+    text-align: center;
+    z-index: 5; }
+    section#splash #introduction p {
       color: #F8F8F8;
       font-size: 48px;
       font-weight: 700; }
-      section#splash #about-me p span {
+      section#splash #introduction p span {
         color: #FF5851; }
-    section#splash #about-me .scroll-to {
+    section#splash #introduction .scroll-to {
       display: inline-block;
       color: #FF5851;
       text-transform: uppercase;
@@ -231,13 +253,13 @@ section#splash {
       text-decoration: none;
       transition: color 0.5s ease, background-color 0.5s ease, transform 0.5s ease;
       cursor: pointer; }
-      section#splash #about-me .scroll-to:hover {
+      section#splash #introduction .scroll-to:hover {
         background-color: #FF5851;
         color: #FFFFFF;
         transform: scale(1.1); }
-        section#splash #about-me .scroll-to:hover i {
+        section#splash #introduction .scroll-to:hover i {
           transform: rotate(90deg); }
-      section#splash #about-me .scroll-to i {
+      section#splash #introduction .scroll-to i {
         margin-left: 5px;
         transition: transform 0.5s ease; }
 

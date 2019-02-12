@@ -1,12 +1,22 @@
 section#splash {
-  background-image: linear-gradient(to bottom, $dark-red, $black);
+  background-color: $dark-red;
   position: relative;
-  #about-me {
+  height: 80vh;
+  &::after {
+    background-image: linear-gradient(to bottom, transparent, $black);
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+  }
+  #introduction {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 5;
     p {
       color: $off-white;
       font-size: 48px;
