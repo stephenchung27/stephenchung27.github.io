@@ -37,3 +37,108 @@ section#about-me {
     right: 50% !important;
   }
 }
+
+.picture {
+  position: absolute;
+  top: 35vh;
+  left: 20vw;
+  width: 30vh;
+  height: 30vh;
+  background: $off-white;
+  transform: translateX(calc(-100% - 30vh));
+  transition: transform 1s ease;
+  &.visible {
+    transform: translateX(0);
+  }
+}
+
+.brain {
+  position: absolute;
+  left: 29vw;
+  width: 20vh;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 1s ease, opacity 1s ease;
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.info {
+  position: absolute;
+  width: 40vw;
+  height: 55vh;
+  background-color: $off-white;
+  right: 20vw;
+  top: 35vh;
+  transition: transform 1s ease;
+  transform: translateX(calc(+100% + 20vw + 2vh));
+  &.visible {
+    transform: translateX(0);
+  }
+}
+
+.tech-name {
+  position: absolute;
+  left: 20vw;
+  top: 90vh;
+  width: calc(20vw - 2vh);
+  height: 20px;
+  background-color: $black;
+  z-index: 1;
+  transition: transform 1s ease;
+  color: $off-white;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  transform: translate(calc(-100% - 20vw - 2vh), -20px);
+  &.visible {
+    transform: translate(0, -20px);
+  }
+  &.dropdown {
+    transform: translate(0);
+  }
+}
+
+.technologies {
+  position: absolute;
+  left: 20vw;
+  top: 67vh;
+  width: calc(20vw - 2vh);
+  height: 23vh;
+  background-color: $red;
+  z-index: 2;
+  transition: transform 1s ease;
+  transform: translateX(calc(-100% - 20vw - 2vh));
+  &.visible {
+    transform: translateX(0);
+  }
+  ul {
+    box-sizing: border-box;
+    padding: 1vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $white;
+    flex-wrap: wrap;
+    li { 
+      flex: 1 1 calc(100% / 4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(1);
+      transition: transform 0.5s ease;
+      cursor: pointer;
+      i {
+        font-size: 2vw;
+      }
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}

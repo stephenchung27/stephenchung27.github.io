@@ -104,6 +104,25 @@ const about = () => {
 
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#projects-title").addClass("visible");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#about-me .title-underline").addClass("visible");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".picture").addClass("visible");
+    setTimeout(() => {jquery__WEBPACK_IMPORTED_MODULE_0___default()(".info").addClass("visible")}, 200);
+    setTimeout(() => {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".tech-name").addClass("visible");
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".technologies").addClass("visible")
+    }, 200);
+    setTimeout(() => { jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brain").addClass("visible") }, 500);
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".technologies").hover(() => {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".tech-name").addClass("dropdown");
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".tech-name").html("");
+    }, () => {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".tech-name").removeClass("dropdown");
+    });
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('*[class^="devicon"]').hover(function() {
+      const techName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr("id");
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".tech-name").html(techName);
+    });
   }
 }
 

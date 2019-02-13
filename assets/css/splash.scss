@@ -16,7 +16,7 @@ section#splash {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 5;
+    z-index: 2;
     p {
       color: $off-white;
       font-size: 48px;
@@ -64,4 +64,8 @@ canvas#waves {
   height:250px;
   display:block; margin:0 auto;background:#333;
   z-index: -1;
+  background-color: $black;
+  &.visible {
+    opacity: 1;
+  }
 }
