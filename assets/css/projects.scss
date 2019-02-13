@@ -29,6 +29,7 @@ section#projects {
     background-color: transparent;
     .project-list {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       width: 100%;
       > li {
@@ -40,6 +41,7 @@ section#projects {
         opacity: 0;
         transform: translateY(40px);
         transition: transform 1s ease, opacity 1s ease;
+        margin-bottom: 10em;
         &.visible {
           transform: translateY(0px);
           opacity: 1;
@@ -86,6 +88,11 @@ section#projects {
             box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
             border-radius: 10px;
             width: 100%;
+          }
+          img {
+            box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
+            border-radius: 10px;
+            width:100%;
           }
         }
         .project-list-item-description {
