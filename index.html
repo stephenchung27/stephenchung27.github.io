@@ -21,14 +21,14 @@
     <div id="introduction">
       <p>Hello, my name is <span>Stephen Chung</span>.</p>
       <p>I am a web developer in New York City.</p>
-      <a href="#about-me" class="scroll-to">Find out more <i class="fas fa-arrow-circle-right"></i></a>
+      <a href="#about-me" class="scroll-to-about-me">Find out more <i class="fas fa-arrow-circle-right"></i></a>
     </div>
   </section>
   <section id="about-me">
     <canvas id="waves"></canvas>
-    <h2 id="projects-title" class="section-title">About Me</h2>
+    <h2 id="aboutme-title" class="section-title">About Me</h2>
     <div class="title-underline"></div>
-    <img src="assets/images/brain.png" class="brain"/>
+    <img src="assets/images/brain.png" class="brain" />
     <div class="picture"></div>
     <div class="info"></div>
     <div class="tech-name"></div>
@@ -44,27 +44,29 @@
         <li><i class="devicon-mongodb-plain" id="MongoDB"></i></li>
       </ul>
     </div>
+    <a href="#projects" class="scroll-to-projects"><i class="far fa-arrow-alt-circle-down"></i></a>
   </section>
   <section id="projects">
     <div class="projects-wrapper">
+      <h2 id="projects-title" class="section-title">Projects</h2>
       <ul class="project-list">
         <li id="hexagon">
-          <video loop muted id="hexagon-demo">
-            <source src="./assets/videos/hexagon.mov">
-          </video>
-          <div class="project-list-item-overlay">
-            <div class="project-list-item-description">
-              <h3>Hexagon</h3>
-              <ul class="project-technologies">
-                <li>Javascript</li>
-                <li>Canvas</li>
-              </ul>
-              <a href="/hexagon/">Live <i class="fas fa-external-link-square-alt"></i></a>
-            </div>
+          <div class="video-wrapper">
+            <div class="hover-message">Hover to play video</div>
+            <video loop muted id="hexagon-demo">
+              <source src="./assets/videos/hexagon.mov">
+            </video>
+          </div>
+          <div class="project-list-item-description">
+            <h3>Hexagon</h3>
+            <p class="description">
+              Avoid the collapsing walls in this exciting rendition of the famous
+              video game called Super Hexagon. Created in three days using
+              Canvas and Vanilla Javascript.
+            </p>
+            <a href="/hexagon/">View Project <i class="fas fa-external-link-square-alt"></i></a>
           </div>
         </li>
-        <li></li>
-        <li></li>
       </ul>
     </div>
   </section>

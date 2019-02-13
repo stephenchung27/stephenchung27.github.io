@@ -130,12 +130,25 @@ table {
 video::-webkit-media-controls {
   display: none !important; }
 
+h2#projects-title.section-title {
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 700;
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 0;
+  color: #FFFFFF;
+  margin-bottom: 40px; }
+  h2#projects-title.section-title.visible {
+    opacity: 1;
+    transform: translateX(0); }
+
 section#projects {
   background: #1B1B1F;
   box-sizing: border-box;
-  min-height: 100vh;
-  position: relative; }
+  min-height: 100vh; }
   section#projects .projects-wrapper {
+    position: relative;
     margin: 0 auto;
     padding: 80px 100px;
     max-width: 1200px;
@@ -146,60 +159,90 @@ section#projects {
       width: 100%; }
       section#projects .projects-wrapper .project-list > li {
         box-sizing: border-box;
-        width: 33%;
-        text-align: center;
-        transition: transform .5s ease;
-        position: relative; }
+        width: 100%;
+        display: flex;
+        align-items: top;
+        justify-content: space-between;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: transform 1s ease, opacity 1s ease; }
+        section#projects .projects-wrapper .project-list > li.visible {
+          transform: translateY(0px);
+          opacity: 1; }
         section#projects .projects-wrapper .project-list > li:hover .project-list-item-overlay {
           opacity: 1; }
           section#projects .projects-wrapper .project-list > li:hover .project-list-item-overlay .project-list-item-description {
             transform: scale(1); }
-        section#projects .projects-wrapper .project-list > li video {
-          width: 100%; }
-        section#projects .projects-wrapper .project-list > li .project-list-item-overlay {
-          background-color: rgba(0, 0, 0, 0.8);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
+        section#projects .projects-wrapper .project-list > li .video-wrapper {
+          width: 50%;
+          height: auto;
+          box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
+          background-color: #303034;
+          padding: 20px 80px;
+          border-radius: 10px;
+          position: relative; }
+          section#projects .projects-wrapper .project-list > li .video-wrapper .hover-message {
+            position: absolute;
+            padding: 10px 20px;
+            background: #000000;
+            border-radius: 5px;
+            bottom: 5px;
+            color: #F8F8F8;
+            left: 50%;
+            transform: translateX(-50%); }
+            section#projects .projects-wrapper .project-list > li .video-wrapper .hover-message::after {
+              content: "";
+              position: absolute;
+              height: 0;
+              width: 0;
+              top: -10px;
+              left: 50%;
+              transform: translateX(-50%);
+              border-top: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid #000000;
+              border-left: 5px solid transparent; }
+          section#projects .projects-wrapper .project-list > li .video-wrapper video {
+            box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
+            border-radius: 10px;
+            width: 100%; }
+        section#projects .projects-wrapper .project-list > li .project-list-item-description {
+          transition: transform 0.3s ease-in-out;
+          font-size: 24px;
+          width: 50%;
+          height: fit-content;
           color: #FFFFFF;
-          opacity: 0;
-          transition: background-color 0.3s ease, opacity 0.3s ease; }
-          section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description {
-            transform: scale(2);
-            transition: transform 0.3s ease-in-out; }
-            section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description h3 {
-              font-size: 24px;
-              font-weight: 700;
-              margin-bottom: 10px; }
-            section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description .project-technologies {
-              display: flex;
-              justify-content: space-evenly;
-              width: 100%;
-              margin-bottom: 10px; }
-              section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description .project-technologies li {
-                margin-left: 10px; }
-            section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description a {
-              margin-top: 10px;
-              display: inline-block;
-              color: #FFFFFF;
-              text-transform: uppercase;
-              font-size: 16px;
-              font-weight: 700;
-              padding: 10px 20px;
-              background: transparent;
-              border: 2px solid #FFFFFF;
-              outline: none;
-              transition: transform 0.5s ease;
-              text-decoration: none; }
-              section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description a i {
-                margin-left: 5px; }
-              section#projects .projects-wrapper .project-list > li .project-list-item-overlay .project-list-item-description a:hover {
-                transform: scale(1.1); }
+          box-sizing: border-box;
+          padding: 0 20px;
+          text-shadow: 0px 2px 0px #000000; }
+          section#projects .projects-wrapper .project-list > li .project-list-item-description h3 {
+            color: #FF5851;
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 30px; }
+          section#projects .projects-wrapper .project-list > li .project-list-item-description .description {
+            display: flex;
+            width: 100%;
+            margin-bottom: 30px;
+            color: #878789; }
+          section#projects .projects-wrapper .project-list > li .project-list-item-description a {
+            display: inline-block;
+            color: #FF5851;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            font-weight: 700;
+            padding: 20px 30px;
+            background: transparent;
+            border: 2px solid #FF5851;
+            outline: none;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            text-decoration: none;
+            text-shadow: none; }
+            section#projects .projects-wrapper .project-list > li .project-list-item-description a i {
+              margin-left: 5px; }
+            section#projects .projects-wrapper .project-list > li .project-list-item-description a:hover {
+              background-color: #FF5851;
+              color: #1B1B1F; }
 
 section#splash {
   background-color: #1B1B1F;
@@ -209,9 +252,9 @@ section#splash {
     background-image: linear-gradient(to bottom, transparent, #1B1B1F);
     content: "";
     position: absolute;
-    top: 50%;
+    top: 75%;
     width: 100%;
-    height: 50%; }
+    height: 25%; }
   section#splash #introduction {
     position: absolute;
     top: calc(50% + 10vh);
@@ -226,7 +269,7 @@ section#splash {
       text-shadow: 0px 2px 0px #000000; }
       section#splash #introduction p span {
         color: #FF5851; }
-    section#splash #introduction .scroll-to {
+    section#splash #introduction .scroll-to-about-me {
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -243,15 +286,15 @@ section#splash {
       text-decoration: none;
       transition: color 0.5s ease, background-color 0.5s ease, transform 0.5s ease;
       cursor: pointer; }
-      section#splash #introduction .scroll-to:hover {
+      section#splash #introduction .scroll-to-about-me:hover {
         background-color: #FF5851;
         color: #FFFFFF;
         transform: translateY(-3px); }
-        section#splash #introduction .scroll-to:hover i {
+        section#splash #introduction .scroll-to-about-me:hover i {
           transform: rotate(90deg); }
-      section#splash #introduction .scroll-to i {
+      section#splash #introduction .scroll-to-about-me i {
         margin-left: 8px;
-        transition: transform 0.5s ease; }
+        transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
 
 canvas#waves {
   width: 100%;
@@ -264,7 +307,15 @@ canvas#waves {
   canvas#waves.visible {
     opacity: 1; }
 
-h2#projects-title.section-title {
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.025); }
+  100% {
+    transform: scale(1); } }
+
+h2#aboutme-title.section-title {
   position: absolute;
   left: -50%;
   transform: translateX(-50%);
@@ -274,7 +325,7 @@ h2#projects-title.section-title {
   font-weight: 700;
   transition: left 1s ease;
   opacity: 0; }
-  h2#projects-title.section-title.visible {
+  h2#aboutme-title.section-title.visible {
     opacity: 1;
     left: 50% !important; }
 
@@ -321,7 +372,8 @@ section#about-me {
   transition: transform 1s ease, opacity 1s ease; }
   .brain.visible {
     opacity: 1;
-    transform: scale(1); }
+    transform: scale(1);
+    animation: pulse 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite; }
 
 .info {
   position: absolute;
@@ -382,12 +434,24 @@ section#about-me {
       justify-content: center;
       align-items: center;
       transform: scale(1);
-      transition: transform 0.5s ease;
+      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       cursor: pointer; }
       .technologies ul li i {
         font-size: 2vw; }
       .technologies ul li:hover {
         transform: scale(1.5); }
+
+#about-me .scroll-to-projects {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 2.5vh;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #FF5851;
+  font-size: 3em; }
+  #about-me .scroll-to-projects i {
+    margin-right: 20px; }
 
 body {
   background-color: #F8F8F8;

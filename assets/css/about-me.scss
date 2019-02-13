@@ -1,4 +1,16 @@
-h2#projects-title.section-title {
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+h2#aboutme-title.section-title {
   position: absolute;
   left: -50%;
   transform: translateX(-50%);
@@ -63,6 +75,7 @@ section#about-me {
   &.visible {
     opacity: 1;
     transform: scale(1);
+    animation: pulse 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
   }
 }
 
@@ -131,7 +144,7 @@ section#about-me {
       justify-content: center;
       align-items: center;
       transform: scale(1);
-      transition: transform 0.5s ease;
+      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       cursor: pointer;
       i {
         font-size: 2vw;
@@ -140,5 +153,19 @@ section#about-me {
         transform: scale(1.5);
       }
     }
+  }
+}
+
+#about-me .scroll-to-projects {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 2.5vh;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: $red;
+  font-size: 3em;
+  i {
+    margin-right: 20px;
   }
 }

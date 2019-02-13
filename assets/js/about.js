@@ -1,17 +1,18 @@
 import $ from 'jquery';
+import { loadOut } from './utils';
 
 const about = () => {
   if ($(window).scrollTop() > $(window).height() / 4) {
 
-    $("#projects-title").addClass("visible");
-    $("#about-me .title-underline").addClass("visible");
-    $(".picture").addClass("visible");
-    setTimeout(() => {$(".info").addClass("visible")}, 200);
-    setTimeout(() => {
-      $(".tech-name").addClass("visible");
-      $(".technologies").addClass("visible")
-    }, 200);
-    setTimeout(() => { $(".brain").addClass("visible") }, 500);
+    loadOut([
+      ["#about-me .title-underline", "visible"],
+      [".tech-name", "visible"],
+      [".technologies", "visible"],
+      ["#aboutme-title", "visible", 100],
+      [".info", "visible", 200],
+      [".picture", "visible", 100],
+      [".brain", "visible", 500]
+    ])
 
     $(".technologies").hover(() => {
       $(".tech-name").addClass("dropdown");
