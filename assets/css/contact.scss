@@ -1,3 +1,68 @@
+#contact-arrow {
+  background-color: $black;
+}
+
 #contact {
-  background-color: $off-white;
+  background: $red;
+  text-align: center;
+  padding: 80px;
+  margin-top: -2px;
+  color: $off-white;
+  a.to-the-top {
+    display: block;
+    color: $white;
+    font-size: 24px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid $off-white;
+    margin: 0 auto;
+    &:hover {
+      background-color: $off-white;
+      color: $red;
+    }
+  }
+
+  p.contact-message {
+    margin: 40px auto 0;
+    width: 30vw;
+    font-size: 24px;
+  }
+  ul.other-pages {
+    display: flex;
+    margin: 40px auto 0px;
+    width: 20vw;
+    justify-content: space-between;
+    a {
+      color: $off-white;
+    }
+    li {
+      padding: 15px;
+      border-radius: 50%;
+      border: 2px solid $off-white;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 24px;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      &:hover {
+        background-color: $off-white;
+        color: $red;
+      }
+    }
+  }
+  p.contact-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0;
+    i {
+      margin-left: 5px;
+      font-size: 20px;
+    }
+  }
+
 }

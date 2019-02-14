@@ -114,29 +114,47 @@ section#projects {
             margin-bottom: 30px;
             color: #878789;
           }
-          a {
-            display: inline-block;
-            color: $red;
-            text-transform: uppercase;
-            font-size: 0.8em;
-            font-weight: 700;
-            padding: 20px 30px;
-            background: transparent;
-            border: 2px solid $red;
-            outline: none;
-            transition: background-color 0.5s ease, color 0.5s ease;
-            text-decoration: none;
-            text-shadow: none;
-            i {
-              margin-left: 5px;
+          .project-links {
+            display: flex;
+            align-items: center;
+            a {
+              display: inline-block;
+              color: $red;
+              text-transform: uppercase;
+              font-size: 0.8em;
+              font-weight: 700;
+              padding: 20px 30px;
+              background: transparent;
+              border: 2px solid $red;
+              outline: none;
+              transition: background-color 0.5s ease, color 0.5s ease;
+              text-decoration: none;
+              text-shadow: none;
+              i {
+                margin-left: 5px;
+              }
+              &:hover {
+                background-color: $red;
+                color: $black;
+              }
             }
-            &:hover {
-              background-color: $red;
-              color: $black;
+            a.github-link {
+              border:none;
+              font-size: 2em;
+              font-weight: 400;
+              transition: color 0.5s ease;
+              &:hover {
+                color: $white;
+                background-color: $black;
+              }
             }
           }
         }
       }
     }
   }
+}
+
+canvas#projects-arrow {
+  background-color: $white;
 }

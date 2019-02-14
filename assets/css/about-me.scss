@@ -53,7 +53,7 @@ section#about-me {
 .picture {
   position: absolute;
   top: 35vh;
-  left: 20vw;
+  left: 23vw;
   width: 30vh;
   height: 30vh;
   background: $off-white;
@@ -66,7 +66,8 @@ section#about-me {
 
 .brain {
   position: absolute;
-  left: 29vw;
+  top: -11vh;
+  right: -5vh;
   width: 20vh;
   z-index: 2;
   opacity: 0;
@@ -83,11 +84,18 @@ section#about-me {
   position: absolute;
   width: 40vw;
   height: 55vh;
-  background-color: $off-white;
+  // background-color: $off-white;
   right: 20vw;
   top: 35vh;
   transition: transform 1s ease;
   transform: translateX(calc(+100% + 20vw + 2vh));
+  box-sizing: border-box;
+  padding: 3vw;
+  font-size: 2em;
+  text-align:center;
+  p {
+    margin-top: 5vh;
+  }
   &.visible {
     transform: translateX(0);
   }

@@ -28,9 +28,19 @@
     <canvas id="waves"></canvas>
     <h2 id="aboutme-title" class="section-title">About Me</h2>
     <div class="title-underline"></div>
-    <img src="assets/images/brain.png" class="brain" />
-    <div class="picture"></div>
-    <div class="info"></div>
+    <div class="picture">
+      <img src="assets/images/brain.png" class="brain" />
+      Picture when I get one...
+    </div>
+    <div class="info">
+      <p>
+        Born in South Korea but raised in Brooklyn, New York. I love immersing myself in meaningful
+        projects and creating things that can impact people's lives directly.
+      </p>
+      <p> I enjoy working on deep logic puzzles and
+        solving complex problems and nothing is more engaging than looking for ways to make my code more efficient.
+      </p>
+    </div>
     <div class="tech-name"></div>
     <div class="technologies">
       <ul>
@@ -65,7 +75,12 @@
               video game called Super Hexagon. Created in three days using
               Canvas and Vanilla Javascript.
             </p>
-            <a href="/hexagon/">View Project <i class="fas fa-external-link-square-alt"></i></a>
+            <div class="project-links">
+              <a href="/hexagon/">View Project <i class="fas fa-external-link-square-alt"></i></a>
+              <a href="https://github.com/stephenchung27/hexagon" class="github-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
           </div>
         </li>
         <li id="discode">
@@ -76,8 +91,13 @@
               for gamers called Discord. Created in a sprint of ten days using
               Ruby on Rails for the backend and React.js for the frontend.
             </p>
-            <a href="http://discode-aa.herokuapp.com/#/">View Project <i
-                class="fas fa-external-link-square-alt"></i></a>
+            <div class="project-links">
+              <a href="http://discode-aa.herokuapp.com/#/">View Project <i
+                  class="fas fa-external-link-square-alt"></i></a>
+              <a href="https://github.com/stephenchung27/discode" class="github-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
           </div>
           <div class="video-wrapper">
             <div id="slides">
@@ -90,9 +110,26 @@
       </ul>
     </div>
   </section>
+  <canvas id="contact-arrow"></canvas>
   <section id="contact">
-    <canvas id="contact-arrow"></canvas>
-    
+    <a href="#splash" class="to-the-top"><i class="fas fa-angle-double-up"></i></a>
+    <p class="contact-message">Interested in working together? Check out my other pages and send me a message!</p>
+    <ul class="other-pages">
+      <a href="https://github.com/stephenchung27">
+        <li><i class="fab fa-github-alt"></i></li>
+      </a>
+      <a href="https://www.linkedin.com/in/stephenchung27/">
+        <li><i class="fab fa-linkedin-in"></i></li>
+      </a>
+      <a href="">
+        <li><i class="fab fa-angellist"></i></li>
+      </a>
+      <a href="mailto:me@stephenchung.io">
+        <li><i class="far fa-envelope"></i></li>
+      </a>
+    </ul>
+    <p class="contact-copyright">Handcrafted by me <i class="far fa-copyright"></i></p>
   </section>
 </body>
+
 </html>

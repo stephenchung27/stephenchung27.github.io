@@ -10,11 +10,13 @@ import './slides';
 document.addEventListener("DOMContentLoaded", () => {
   runSplash();
   figure();
-  drawWaves();
-  setupArrow();
-  setupContact();
+  drawWaves("waves", ['#521D1F', '#FF6A66', '#ffffff'], 0.4);
+  drawWaves("projects-arrow", ['#521D1F', '#FF6A66', '#1B1B1F']);
+  drawWaves("contact-arrow", ['#521D1F', '#ffffff', '#FF5851']);
+  // setupArrow();
+  // setupContact();
 
-  $(function() {
+  $(function () {
     $("#slides").slidesjs({
       navigation: {
         active: false
@@ -43,10 +45,18 @@ document.addEventListener("DOMContentLoaded", () => {
     $('html, body').stop().animate({ scrollTop: new_position.top }, 1000);
     e.preventDefault();
   });
+
   $('.scroll-to-projects').click((e) => {
     const jump = $('.scroll-to-projects').attr('href');
     const new_position = $(jump).offset();
     $('html, body').stop().animate({ scrollTop: new_position.top }, 1000);
+    e.preventDefault();
+  });
+
+  $('.to-the-top').click((e) => {
+    const jump = $('.to-the-top').attr('href');
+    const new_position = $(jump).offset();
+    $('html, body').stop().animate({ scrollTop: new_position.top }, 500);
     e.preventDefault();
   });
 });
