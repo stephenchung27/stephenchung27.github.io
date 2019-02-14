@@ -3,12 +3,30 @@ import runSplash from './splash';
 import projects, { figure } from './projects';
 import drawWaves from './waves';
 import about from './about';
+import './slides';
 // import * as Waypoints from 'waypoints';
 
 document.addEventListener("DOMContentLoaded", () => {
   runSplash();
   figure();
   drawWaves();
+  $(function() {
+    $("#slides").slidesjs({
+      navigation: {
+        active: false
+      },
+      pagination: {
+        active: false
+      },
+      play: {
+        active: false,
+        effect: "fade",
+        interval: 5000,
+        auto: true,
+        pauseOnHover: false,
+      }
+    });
+  });
 
   $(document).scroll(() => {
     about();

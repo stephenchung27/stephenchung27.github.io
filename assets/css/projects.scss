@@ -57,11 +57,20 @@ section#projects {
         .video-wrapper {
           width: 50%;
           height: auto;
-          box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
           background-color: #303034;
           padding: 20px 80px;
           border-radius: 10px;
           position: relative;
+          box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
+          #slides {
+            box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
+            border-radius: 10px;
+            position: relative;
+            img {
+              width:100%;
+              height: 100%;
+            }
+          }
           .hover-message {
             position: absolute;
             padding: 10px 20px;
@@ -88,11 +97,6 @@ section#projects {
             box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
             border-radius: 10px;
             width: 100%;
-          }
-          img {
-            box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
-            border-radius: 10px;
-            width:100%;
           }
         }
         .project-list-item-description {
