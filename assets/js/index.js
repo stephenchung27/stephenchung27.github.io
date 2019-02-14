@@ -1,8 +1,9 @@
 import $ from 'jquery';
 import runSplash from './splash';
-import projects, { figure } from './projects';
+import projects, { figure, setupArrow } from './projects';
 import drawWaves from './waves';
 import about from './about';
+import setupContact from './contact';
 import './slides';
 // import * as Waypoints from 'waypoints';
 
@@ -10,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   runSplash();
   figure();
   drawWaves();
+  setupArrow();
+  setupContact();
+
   $(function() {
     $("#slides").slidesjs({
       navigation: {

@@ -132,6 +132,34 @@ const about = () => {
 
 /***/ }),
 
+/***/ "./assets/js/contact.js":
+/*!******************************!*\
+  !*** ./assets/js/contact.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const setupArrow = () => {
+  const canvas = document.getElementById("contact-arrow");
+  const ctx = canvas.getContext("2d");
+
+  const W = window.innerWidth;
+  canvas.width = W;
+  canvas.height = 40;
+
+  ctx.moveTo(0, 0);
+  ctx.lineTo(W / 2, 40);
+  ctx.lineTo(W, 0);
+  ctx.fillStyle = "#1B1B1F";
+  ctx.fill();
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (setupArrow);
+
+/***/ }),
+
 /***/ "./assets/js/index.js":
 /*!****************************!*\
   !*** ./assets/js/index.js ***!
@@ -147,7 +175,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./projects */ "./assets/js/projects.js");
 /* harmony import */ var _waves__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./waves */ "./assets/js/waves.js");
 /* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./about */ "./assets/js/about.js");
-/* harmony import */ var _slides__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./slides */ "./assets/js/slides.js");
+/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./contact */ "./assets/js/contact.js");
+/* harmony import */ var _slides__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./slides */ "./assets/js/slides.js");
+
 
 
 
@@ -160,6 +190,9 @@ document.addEventListener("DOMContentLoaded", () => {
   Object(_splash__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_projects__WEBPACK_IMPORTED_MODULE_2__["figure"])();
   Object(_waves__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  Object(_projects__WEBPACK_IMPORTED_MODULE_2__["setupArrow"])();
+  Object(_contact__WEBPACK_IMPORTED_MODULE_5__["default"])();
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(function() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#slides").slidesjs({
       navigation: {
@@ -203,17 +236,33 @@ document.addEventListener("DOMContentLoaded", () => {
 /*!*******************************!*\
   !*** ./assets/js/projects.js ***!
   \*******************************/
-/*! exports provided: figure, default */
+/*! exports provided: setupArrow, figure, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setupArrow", function() { return setupArrow; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "figure", function() { return figure; });
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./assets/js/utils.js");
 
 
+
+const setupArrow = () => {
+  const canvas = document.getElementById("projects-arrow");
+  const ctx = canvas.getContext("2d");
+
+  const W = window.innerWidth;
+  canvas.width = W;
+  canvas.height = 40;
+
+  ctx.moveTo(0, 0);
+  ctx.lineTo(W / 2, 40);
+  ctx.lineTo(W, 0);
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fill();
+}
 
 const projects = () => {
   console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop());
@@ -225,7 +274,12 @@ const projects = () => {
   }
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height() + jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height() / 5) {
     Object(_utils__WEBPACK_IMPORTED_MODULE_1__["loadOut"])([
-      [".project-list li", "visible"]
+      [".project-list li#hexagon", "visible"]
+    ]);
+  }
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height() + jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height() / 4) {
+    Object(_utils__WEBPACK_IMPORTED_MODULE_1__["loadOut"])([
+      [".project-list li#discode", "visible", 300]
     ]);
   }
 }

@@ -24,7 +24,7 @@ section#projects {
   .projects-wrapper {
     position: relative;
     margin: 0 auto;
-    padding: 80px 100px;
+    padding: 80px 100px 0px;
     max-width: 1200px;
     background-color: transparent;
     .project-list {
@@ -56,27 +56,21 @@ section#projects {
         }
         .video-wrapper {
           width: 50%;
-          height: auto;
-          background-color: #303034;
-          padding: 20px 80px;
-          border-radius: 10px;
           position: relative;
-          box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
           #slides {
             box-shadow: 6px 24px 61px -12px rgba(0, 0, 0, 0.49);
             border-radius: 10px;
             position: relative;
             img {
-              width:100%;
               height: 100%;
             }
           }
           .hover-message {
             position: absolute;
             padding: 10px 20px;
-            background: #000000;
+            background: $red;
             border-radius: 5px;
-            bottom: 5px;
+            bottom: -15px;
             color: $off-white;
             left: 50%;
             transform: translateX(-50%);
@@ -89,7 +83,7 @@ section#projects {
               transform: translateX(-50%);
               border-top: 5px solid transparent;
               border-right: 5px solid transparent;
-              border-bottom: 5px solid #000000;
+              border-bottom: 5px solid $red;
               border-left: 5px solid transparent;
             }
           }

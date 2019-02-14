@@ -158,18 +158,25 @@ section#about-me {
 
 #about-me .scroll-to-projects {
   display: flex;
+  align-items: center;
   position: absolute;
   left: 50%;
   bottom: 2.5vh;
   transform: translateX(-50%);
   text-decoration: none;
   color: $red;
-  font-size: 3em;
-  transition: transform 1s ease;
+  font-size: 2em;
+  transition: color .4s ease, transform .5s ease;
   i {
     margin-right: 20px;
+    font-size: 1.5em;    
+    transition: transform .2s ease;
   }
   &:hover {
-    transform: translateX(-50%), rotate(90deg);
+    color: $black;
+    transform: translateX(-50%);
+    i {
+      transform: rotate(360deg);
+    }
   }
 }

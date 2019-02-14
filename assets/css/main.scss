@@ -3,9 +3,10 @@
 @import 'projects';
 @import 'splash';
 @import 'about-me';
+@import 'contact';
 @import url('https://fonts.googleapis.com/css?family=Palanquin:300,700');
 
 body {
-  background-color: $off-white;
+  background-color: $black;
   font-family: 'Palanquin', sans-serif;
 }
