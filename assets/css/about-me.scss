@@ -64,22 +64,6 @@ section#about-me {
   }
 }
 
-.brain {
-  position: absolute;
-  top: -11vh;
-  right: -5vh;
-  width: 20vh;
-  z-index: 2;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: transform 1s ease, opacity 1s ease;
-  &.visible {
-    opacity: 1;
-    transform: scale(1);
-    animation: pulse 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-}
-
 .info {
   position: absolute;
   width: 40vw;
@@ -90,11 +74,32 @@ section#about-me {
   transition: transform 1s ease;
   transform: translateX(calc(+100% + 20vw + 2vh));
   box-sizing: border-box;
-  padding: 3vw;
+  // padding: 3vw;
   font-size: 2em;
-  text-align:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    display: block;
+    color: $off-white;
+    text-decoration: none;
+    background-color: $red;
+    padding: 20px 30px;
+    border: 3px solid $red;
+    border-radius: 5px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    &:hover {
+      background-color: $off-white;
+      color: $red;
+    }
+  }
   p {
-    margin-top: 5vh;
+    i {
+      margin-right: 10px;
+    }
+    display: flex;
+    text-align: center;
   }
   &.visible {
     transform: translateX(0);

@@ -284,8 +284,21 @@ section#splash {
       font-size: 48px;
       font-weight: 700;
       text-shadow: 0px 2px 0px #000000; }
-      section#splash #introduction p span {
-        color: #FF5851; }
+      section#splash #introduction p .name {
+        display: inline;
+        font-size: 48;
+        font-weight: 700;
+        text-shadow: 0px 2px 0px #000000;
+        color: #FF5851;
+        position: relative; }
+        section#splash #introduction p .name .email {
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          padding: 20px;
+          color: #F8F8F8;
+          background: #FF5851; }
     section#splash #introduction .scroll-to-about-me {
       margin: 0 auto;
       display: flex;
@@ -378,20 +391,6 @@ section#about-me {
   .picture.visible {
     transform: translateX(0); }
 
-.brain {
-  position: absolute;
-  top: -11vh;
-  right: -5vh;
-  width: 20vh;
-  z-index: 2;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: transform 1s ease, opacity 1s ease; }
-  .brain.visible {
-    opacity: 1;
-    transform: scale(1);
-    animation: pulse 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite; }
-
 .info {
   position: absolute;
   width: 40vw;
@@ -401,11 +400,28 @@ section#about-me {
   transition: transform 1s ease;
   transform: translateX(calc(+100% + 20vw + 2vh));
   box-sizing: border-box;
-  padding: 3vw;
   font-size: 2em;
-  text-align: center; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  .info a {
+    display: block;
+    color: #F8F8F8;
+    text-decoration: none;
+    background-color: #FF5851;
+    padding: 20px 30px;
+    border: 3px solid #FF5851;
+    border-radius: 5px;
+    transition: background-color 0.5s ease, color 0.5s ease; }
+    .info a:hover {
+      background-color: #F8F8F8;
+      color: #FF5851; }
   .info p {
-    margin-top: 5vh; }
+    display: flex;
+    text-align: center; }
+    .info p i {
+      margin-right: 10px; }
   .info.visible {
     transform: translateX(0); }
 
