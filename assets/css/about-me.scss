@@ -53,12 +53,16 @@ section#about-me {
 .picture {
   position: absolute;
   top: 35vh;
-  left: 23vw;
+  left: 25vw;
   width: 30vh;
   height: 30vh;
   background: $off-white;
   transform: translateX(calc(-100% - 30vh));
   transition: transform 1s ease;
+  background-image: url('../images/profile.jpeg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
   &.visible {
     transform: translateX(0);
   }
